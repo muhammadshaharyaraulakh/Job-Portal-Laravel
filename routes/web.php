@@ -14,3 +14,6 @@ Route::get('login', function () {
 Route::get('findJobs',function(){
     return view('user.joblisting');
 });
+Route::get('postJob',function(){
+    return view('Employers.postJob');
+});
