@@ -11,3 +11,6 @@ Route::get('signup', function () {
 Route::get('login', function () {
     return view('authentication.login');
 });
+Route::get('findJobs',function(){
+    return view('user.joblisting');
+});
