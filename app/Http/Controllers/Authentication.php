@@ -47,4 +47,34 @@ class Authentication extends Controller
 
         return redirect('/');
     }
+
+
+public function login(Request $request)
+{
+    $request->validate([
+        'email'    => 'required|email',
+        'password' => 'required',
+    ]);
+
+
+    $user = User::where('email', $request->email)->first();
+
+    if (!$user) {
+        return back()->withErrors([
+            'email' => 'Email not found.'
+        ])->withInput();
+    }
+
+    if (!Hash::check($request->password, $user->password)) {
+        return back()->withErrors([
+            'password' => 'Incorrect password.'
+        ])->withInput();
+    }
+    $remember = $request->has('remember');
+
+    Auth::login($user, $remember);
+
+    return redirect()->route('/');
+}
+
 }

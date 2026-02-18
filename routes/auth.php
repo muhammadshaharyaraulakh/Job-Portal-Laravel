@@ -17,6 +17,8 @@ Route::get('/login/github/callback', [SocialController::class, 'handleGithubCall
 Route::get('login', function () {
     return view('authentication.login');
 })->name('login.form');
+Route::post('login',[Authentication::class,'login'])->name('login.submit');
+
 Route::get('logout', function () {
     Auth::logout();
     return redirect('/');

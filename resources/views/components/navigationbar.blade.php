@@ -18,32 +18,32 @@
       <span class="text-xl font-bold text-brand-purple">AlwaysApply</span>
   </div>
   <div class="desktop-links hidden md:flex flex-wrap items-center gap-6 text-sm font-medium text-gray-700 flex-auto justify-center">
-      <a href="#" class="hover:text-brand-purple transition">Home</a>
-      <a href="#" class="hover:text-brand-purple transition">Find Jobs</a>
-      <a href="#" class="hover:text-brand-purple transition">Profile</a>
-      <a href="#" class="hover:text-brand-purple transition">About Us</a>
+      <a href="/" class="hover:text-brand-purple transition">Home</a>
+      <a href="{{route('jobs')}}" class="hover:text-brand-purple transition">Find Jobs</a>
+      <a href="{{route('profile')}}" class="hover:text-brand-purple transition">Profile</a>
+      <a href="{{route('applications')}}" class="hover:text-brand-purple transition">Applications</a>
   </div>
 <div class="desktop-buttons hidden md:flex flex-wrap items-center gap-4 flex-shrink-0">
     @auth
-        <a href="#">
-            <button class="px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium hover:bg-brand-light transition">
+        <a href="{{route('contact')}}">
+            <button class="cursor-pointer px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium hover:bg-brand-light transition">
                 Contact Us
             </button>
         </a>
 
         <a href="{{ route('logout') }}">
-            <button class="px-6 py-2 bg-brand-purple text-white rounded font-medium shadow-md hover:bg-purple-800 transition">
+            <button class="cursor-pointer px-6 py-2 bg-brand-purple text-white rounded font-medium shadow-md hover:bg-purple-800 transition">
                 Logout
             </button>
         </a>
     @else
         <a href="{{ route('login.form') }}">
-            <button class="px-6 py-2 bg-brand-purple text-white rounded font-medium shadow-md hover:bg-purple-800 transition">
+            <button class="cursor-pointer px-6 py-2 bg-brand-purple text-white rounded font-medium shadow-md hover:bg-purple-800 transition">
                 Login
             </button>
         </a>
         <a href="{{route('signup.form')}}">
-            <button class="px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium hover:bg-brand-light transition">
+            <button class="cursor-pointer px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium hover:bg-brand-light transition">
               Register
             </button>
         </a>
@@ -56,17 +56,33 @@
 </nav>
 <div id="mobile-menu" class="hidden flex-col bg-white border-t p-4 md:hidden w-full z-40 shadow-lg
      transition-all duration-300 ease-in-out origin-top scale-y-0">
-  <a href="#" class="block py-2 text-gray-700 hover:text-brand-purple">Home</a>
-  <a href="#" class="block py-2 text-gray-700 hover:text-brand-purple">Find Jobs</a>
-  <a href="#" class="block py-2 text-gray-700 hover:text-brand-purple">Employers</a>
-  <a href="#" class="block py-2 text-gray-700 hover:text-brand-purple">Admin</a>
-  <a href="#" class="block py-2 text-gray-700 hover:text-brand-purple">About Us</a>
+   <a href="/" class="hover:text-brand-purple transition">Home</a>
+      <a href="{{route('jobs')}}" class="hover:text-brand-purple transition">Find Jobs</a>
+      <a href="{{route('profile')}}" class="hover:text-brand-purple transition">Profile</a>
+      <a href="{{route('applications')}}" class="hover:text-brand-purple transition">Applications</a>
   <div class="mt-4 flex flex-col gap-3">
-      <button class="w-full px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium">
+    @auth
+    <a href="{{route('contact')}}">
+         <button class="w-full px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium">
           Contact Us
       </button>
+    </a>
+     <a href="{{ route('login.form') }}">
+        <button class="w-full px-6 py-2 bg-brand-purple text-white rounded font-medium">
+          Login
+      </button>
+     </a>
+      @else
+      <a href="{{route('signup.form')}}">
+        <button class="w-full px-5 py-2 border border-brand-purple text-brand-purple rounded font-medium">
+          Register
+      </button>
+      </a>
+       <a href="{{ route('login.form') }}">
       <button class="w-full px-6 py-2 bg-brand-purple text-white rounded font-medium">
           Login
       </button>
+      </a>
+      @endauth
   </div>
 </div>

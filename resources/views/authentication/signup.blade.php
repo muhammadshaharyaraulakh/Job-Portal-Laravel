@@ -17,7 +17,7 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email ID<span class="text-red-500">*</span></label>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email Id<span class="text-red-500">*</span></label>
                         <input type="email" placeholder="Enter your email id" value="{{ old('email') }}" name="email"
                             class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent placeholder-gray-400">
                         <p class="text-xs text-gray-500 mt-1">Job notifications will be sent to this email id</p>
@@ -89,23 +89,7 @@
                         <div class="flex-grow border-t border-gray-300"></div>
                     </div>
 
-                    <div class="flex justify-center gap-6">
-
-                       <a href="{{ url('login/google') }}"
-   class="p-3 bg-white border cursor-pointer border-gray-200 rounded-full shadow-sm hover:shadow-md transition inline-flex items-center justify-center rounded-full">
-    <img src="{{ asset('images/google.svg') }}" alt="Google" class="w-8 h-8">
-</a>
-
-<a href="{{url('login/github')}}">
-
-                        <button type="button" class="p-3 bg-white border cursor-pointer border-gray-200 rounded-full shadow-sm hover:shadow-md transition">
-                            <img src="{{asset('images/GitHub.svg')}}" alt="Github" class="w-8 h-8">
-                        </button>
-</a>
-
-
-
-                    </div>
+<x-social-authentication />
 
                 </form>
             </div>

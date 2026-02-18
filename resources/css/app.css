@@ -12,7 +12,12 @@
   --color-brand-purple: #6b21a8;
   --color-brand-light: #f3e8ff;
 }
-
+a{
+  text-decoration: none;
+}
+i{
+  color:#6b21a8;
+}
 .checkbox-custom:checked {
   background-color: var(--color-brand-purple);
   border-color: var(--color-brand-purple);
