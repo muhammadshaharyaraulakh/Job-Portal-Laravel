@@ -31,11 +31,13 @@
                 <span class="text-gray-700">
                     UI/UX Designer, Programming,
                     <span class="text-brand-purple font-medium">
-                        Digital Marketing
+                        Digital Marketing.
                     </span>
-                     etc.
+                    
                 </span>
             </p>
+            
+
         </div>
         <div class="w-full lg:w-1/2 flex justify-center relative mt-10 lg:mt-0">
             <div class="absolute top-0 right-0 w-64 h-64 bg-purple-200 rounded-full filter blur-3xl opacity-30"></div>
@@ -48,7 +50,58 @@
     </div>
 </header>
 
+<section class="py-16 px-6 md:px-16 bg-white w-full overflow-hidden">
+    <div class="max-w-5xl w-full mx-auto flex flex-col lg:flex-row items-center gap-10">
+        
+        <div class="w-full lg:w-1/2 flex justify-center relative mt-10 lg:mt-0 order-2 lg:order-1">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-purple-100 rounded-full filter blur-3xl opacity-40"></div>
+            
+            <img src="{{asset('images/About.png')}}" 
+                 alt="About Us Illustration" 
+                 class="relative z-10 w-full max-w-md object-contain drop-shadow-sm">
+        </div>
 
+        <div class="w-full lg:w-1/2 z-10 flex flex-col order-1 lg:order-2">
+            
+            <span class="text-brand-purple font-medium text-sm uppercase tracking-wider mb-2">
+                Know More About Us
+            </span>
+            
+            <h2 class="text-3xl md:text-4xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-6">
+                Bridging the gap between <span class="text-brand-purple">Talent</span> and <span class="text-brand-purple">Opportunity</span>
+            </h2>
+            
+            <p class="text-gray-500 text-lg mb-6 leading-relaxed">
+                At AlwaysApply, we believe that finding the right job or the perfect candidate shouldn't be a struggle. Our platform is designed to make the hiring process seamless, transparent, and efficient for both job seekers and top-tier employers.
+            </p>
+
+            <div class="flex items-center gap-8 mt-2 mb-8">
+                <div class="flex flex-col">
+                    <span class="text-3xl font-semibold text-brand-purple">10k+</span>
+                    <span class="text-sm text-gray-500 font-medium mt-1">Active Jobs</span>
+                </div>
+                <div class="w-px h-12 bg-gray-200"></div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-semibold text-brand-purple">2k+</span>
+                    <span class="text-sm text-gray-500 font-medium mt-1">Internships</span>
+                </div>
+                <div class="w-px h-12 bg-gray-200"></div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-semibold text-brand-purple">5k+</span>
+                    <span class="text-sm text-gray-500 font-medium mt-1">Companies</span>
+                </div>
+            </div>
+            
+            <div>
+                <a href="{{route('jobs')}}" class="inline-block px-8 py-3 border border-brand-purple text-brand-purple font-medium rounded-md hover:bg-brand-purple hover:text-white transition">
+                    Looking For Job
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <section class="py-16 px-6 md:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
@@ -272,16 +325,60 @@
             </div>
         </div>
     </section>
-
-    <section class="py-12 bg-white border-t border-gray-50">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-xl text-gray-500 mb-10">Top companies hiring now</h3>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale-0 transition-all duration-500">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-8 md:h-10" alt="Google">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" class="h-8 md:h-10" alt="Microsoft">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="h-6 md:h-8" alt="YouTube">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="h-6 md:h-8" alt="IBM">
+<section class="relative w-full py-20 flex items-center bg-gradient-to-l from-purple-50 to-white px-6 md:px-16 overflow-hidden">
+    
+    <div class="max-w-5xl w-full mx-auto flex flex-col lg:flex-row items-center gap-10">
+        
+        <div class="w-full lg:w-1/2 z-10 flex flex-col">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-purple leading-tight mb-6">
+                Register Your Company
+            </h2>
+            <p class="text-gray-500 text-lg mb-8">
+                Hire the best talent from our pool of thousands of qualified candidates. Post jobs, manage applications, and build your dream team with ease.
+            </p>
+            <div>
+                <button class="w-full lg:w-auto px-8 py-3 bg-brand-purple text-white font-medium rounded-md hover:bg-brand-dark transition cursor-pointer">
+                    Register Now
+                </button>
             </div>
         </div>
-    </section>
+
+        <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0 flex flex-col gap-8">
+            
+            <div class="flex items-start gap-5">
+                <div class="w-14 h-14 rounded-full bg-white shadow-sm border border-purple-100 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-user-group text-brand-purple text-xl"></i>
+                </div>
+                <div class="flex flex-col justify-center mt-1">
+                    <h4 class="font-semibold text-brand-purple text-xl mb-1">Access Top Talent</h4>
+                    <p class="text-gray-500 text-base">Connect with thousands of skilled professionals actively looking for their next opportunity.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-5">
+                <div class="w-14 h-14 rounded-full bg-white shadow-sm border border-purple-100 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-bolt-lightning text-brand-purple text-xl"></i>
+                </div>
+                <div class="flex flex-col justify-center mt-1">
+                    <h4 class="font-semibold text-brand-purple text-xl mb-1">Fast & Easy Posting</h4>
+                    <p class="text-gray-500 text-base">Publish your job requirements in minutes and start receiving applications instantly.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-5">
+                <div class="w-14 h-14 rounded-full bg-white shadow-sm border border-purple-100 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-table-cells-large text-brand-purple text-xl"></i>
+                </div>
+                <div class="flex flex-col justify-center mt-1">
+                    <h4 class="font-semibold text-brand-purple text-xl mb-1">Advanced Dashboard</h4>
+                    <p class="text-gray-500 text-base">Track applicants, shortlist candidates, and manage your entire hiring pipeline in one place.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
 <x-footer />
