@@ -337,9 +337,13 @@
                 Hire the best talent from our pool of thousands of qualified candidates. Post jobs, manage applications, and build your dream team with ease.
             </p>
             <div>
+                <a href="{{route('apply')}}">
+
                 <button class="w-full lg:w-auto px-8 py-3 bg-brand-purple text-white font-medium rounded-md hover:bg-brand-dark transition cursor-pointer">
                     Register Now
                 </button>
+                </a>
+                
             </div>
         </div>
 

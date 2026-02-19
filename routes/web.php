@@ -22,4 +22,8 @@ Route::get('contact',function(){
 Route::get('postJob',function(){
     return view('Employers.postJob');
 });
+
+Route::get('apply',function(){
+    return view('apply');
+})->name('apply');
 require __DIR__.'/auth.php';
