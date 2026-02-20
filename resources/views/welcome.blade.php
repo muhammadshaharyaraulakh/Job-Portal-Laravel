@@ -371,7 +371,8 @@
 
             <div class="flex items-start gap-5">
                 <div class="w-14 h-14 rounded-full bg-white shadow-sm border border-purple-100 flex items-center justify-center flex-shrink-0">
-                    <i class="fa-solid fa-table-cells-large text-brand-purple text-xl"></i>
+                    
+                    <i class="fa-solid fa-globe text-xl"></i></span>
                 </div>
                 <div class="flex flex-col justify-center mt-1">
                     <h4 class="font-semibold text-brand-purple text-xl mb-1">Advanced Dashboard</h4>

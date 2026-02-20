@@ -15,11 +15,11 @@ class Authentication extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => [
-                'required',
-                'string',
-                'min:12',
-                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/',
-            ],
+    'required',
+    'string',
+    'min:12',
+    'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/',
+],
             'mobile' => 'required|string|regex:/^\+923\d{9}$/|unique:users',
             'updates' => 'nullable|boolean',
         ], [
@@ -74,7 +74,7 @@ public function login(Request $request)
 
     Auth::login($user, $remember);
 
-    return redirect()->route('/');
+    return redirect('/');
 }
 
 }

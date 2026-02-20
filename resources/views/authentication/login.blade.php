@@ -60,7 +60,7 @@
                         <a href="#" class="text-sm text-brand-purple font-medium hover:underline">Forgot Password?</a>
                     </div>
 
-                    <button type="submit" class="w-full py-3.5 bg-brand-purple text-white text-lg font-bold rounded-lg shadow-lg hover:bg-brand-dark transition transform active:scale-95">
+                    <button type="submit" class="w-full cursor-pointer py-3.5 bg-brand-purple text-white text-lg font-bold rounded-lg shadow-lg hover:bg-brand-dark transition transform active:scale-95">
                         Login
                     </button>
 
